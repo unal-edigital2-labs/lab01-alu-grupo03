@@ -34,6 +34,7 @@ module testbench;
 	// Outputs
 	wire [0:6] sseg;
 	wire [3:0] an;
+	
 
 	// Instantiate the Unit Under Test (UUT)
 	alu uut (
@@ -44,6 +45,7 @@ module testbench;
 		.an(an), 
 		.clk(clk), 
 		.rst(rst)
+		
 	);
 
 
@@ -61,14 +63,12 @@ module testbench;
 		rst = 0;
 		// Add stimulus here
 		
-		#50 opcode = 0;
-		
-		#50 opcode = 1;
-		
 		#50 opcode = 2;
 		
-		#50 opcode = 3;
 		
+		#50 opcode = 1;
+		#50 opcode = 0;
+		$finish;
 	end
    
 	always #1 clk = ~clk;
