@@ -66,8 +66,14 @@ module testbench;
 		#50 opcode = 2;
 		
 		
-		#50 opcode = 1;
-		#50 opcode = 0;
+		#50;
+		#50 opcode =1;
+		
+		#50 opcode =3;
+		#50 opcode =4;
+		
+		
+		#100
 		$finish;
 	end
    

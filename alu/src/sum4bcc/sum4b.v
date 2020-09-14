@@ -1,11 +1,10 @@
 `timescale 1ns / 1ps
 
-module sum4b(init, xi, yi,co,sal);
+module sum4b(init, xi, yi,sal);
 
   input init;
   input [3 :0] xi;
   input [3 :0] yi;
-  output co;
   output [3 :0] sal;
   
   
