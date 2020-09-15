@@ -20,17 +20,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module restador(init, xi, yi,sal);
+module restador(init, xi, yi,sal, signo);
 
   input init;
   input [3 :0] xi;
   input [3 :0] yi;
   output [3 :0] sal;
-  
+  output signo;
   
   wire [4:0] st;
   assign sal= st[3:0];
-  assign Cout = st[4];
+  assign signo = st[4];
 
   assign st  = 	xi-yi;
 
