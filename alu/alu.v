@@ -68,6 +68,7 @@ sum4b sum(. init(init_suma),.xi({1'b0,portA}), .yi({1'b0,portB}),.sal(sal_suma))
 multiplicador mul( .MR(portA), .MD(portB), .init(init_mult),.clk(clk), .pp(sal_mult));
 restador res(. init(init_resta),.xi({1'b0,portA}), .yi({1'b0,portB}),.sal(sal_resta));
 BCDtoSSeg bcd( int_bcd,sseg);
+divisor div(portA,portB,sal_div,init_div);
 //display dp( .num(int_bcd), .clk(clk), .sseg(sseg), .an(an), .rst(rst));
 
 // adicone los dos bloques que hacen flata la resta y división
