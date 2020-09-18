@@ -28,5 +28,5 @@ module divisor(
     );
     wire result;
     assign salida=result;
-    assign result= A/B;
+    assign result= A/B+1;
 endmodule

@@ -1,5 +1,8 @@
 
 ## ENTRADAS
+##CLOCK
+set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { clk }]; 
+set_property IO_L12P_T1_MRCC_35 Sch=clk
 
 ## Switches para seleccionar la operacion
 set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { opcode[0] }] 
