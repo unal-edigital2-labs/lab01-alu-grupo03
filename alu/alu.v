@@ -33,8 +33,8 @@ assign init_div=init[3];
 
 reg [5:0]int_bcd;
 wire [3:0] operacion;
-
-
+wire rt;
+reg rs;
 
 always @(*) begin
 	case(opcode) 
@@ -51,9 +51,21 @@ end
 always @(*) begin
 
 	case(opcode) 
-		2'b00: int_bcd <= sal_suma;
-		2'b01: int_bcd <=sal_resta;
-		2'b10: int_bcd <=sal_mult;
+		2'b00: 
+		begin
+		int_bcd <= sal_suma;
+		rs <=0;
+		end
+		2'b01:
+		begin
+		int_bcd <=sal_resta;
+		rs<=rt;
+		end
+		2'b10: 
+		begin
+		int_bcd <=sal_mult;
+	     rs <=0;
+	     end
 	default:
 		int_bcd <= 0;
 	endcase
@@ -64,7 +76,7 @@ end
 //Instanciación de los operaciones
 
 sum4b sum(. init(init_suma),.xi({1'b0,portA}), .yi({1'b0,portB}),.sal(sal_suma));
-restador res(. init(init_resta),.xi({1'b0,portA}), .yi({1'b0,portB}),.sal(sal_resta),.sresta(rs));
+restador res(. init(init_resta),.xi({1'b0,portA}), .yi({1'b0,portB}),.sal(sal_resta),.sresta(rt));
 //multiplicador mul( .MR(portA), .MD(portB), .init(init_mult),.clk(clk), .pp(sal_mult));
 BCDtoSSeg bcd( int_bcd,sseg,rs,signo);
 
