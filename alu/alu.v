@@ -10,7 +10,7 @@ module alu(
     input clk,
     input rst
  );
-
+//jojojojo
 // Declaración de salidas de cada bloque 
 wire [3:0] sal_suma;
 wire [3:0] sal_resta;
