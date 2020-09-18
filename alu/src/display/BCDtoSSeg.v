@@ -1,11 +1,16 @@
-module BCDtoSSeg (BCD, sseg);
+module BCDtoSSeg (BCD, sseg,rs,signo);
 
-  input [3:0] BCD;
+  input [4:0] BCD;
+  input rs;
   output reg [6:0] sseg;
-
+output reg signo;
 
 
 always @ ( * ) begin
+    case(rs)
+    1'b1:signo=1'b1;
+    default:signo=1'b0;
+    endcase
   case (BCD)
     4'b0000: sseg = 7'b1000000; // "0"  
 	4'b0001: sseg = 7'b1111001; // "1" 
@@ -26,6 +31,5 @@ always @ ( * ) begin
     default:
     sseg = 0;
     endcase
-end
-
+    end
 endmodule

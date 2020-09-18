@@ -1,37 +1,20 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 13.09.2020 18:06:54
-// Design Name: 
-// Module Name: restador
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 
-module restador(init, xi, yi,sal, signo);
+module restador(init, xi, yi,sal,sresta);
 
   input init;
   input [3 :0] xi;
   input [3 :0] yi;
-  output [3 :0] sal;
-  output signo;
-  
-  wire [4:0] st;
-  assign sal= st[3:0];
-  assign signo = st[4];
+  output [3:0] sal;
+  output sresta;
 
-  assign st  = 	xi-yi;
+  wire [3:0] st;
+  wire rs;
 
+assign st=(xi>yi)? xi-yi:yi-xi;
+assign rs=(xi>=yi)? 1'b0:1'b1;
+assign sresta=rs;
+assign sal= st;
+ 
 endmodule

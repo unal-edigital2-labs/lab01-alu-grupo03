@@ -115,7 +115,6 @@ always @(posedge clk) begin
 		rst =0;
 		sh =0;
 		add =0;
-	
 	end
 	 default:
 		status =START;
