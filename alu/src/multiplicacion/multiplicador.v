@@ -69,6 +69,10 @@ always @(posedge clk) begin
 
 end
 
+always @(A,B) begin
+	status=START;
+end
+
 // FSM 
 parameter START =0,  CHECK =1, ADD =2, SHIFT =3, END1 =4;
 
@@ -115,7 +119,6 @@ always @(posedge clk) begin
 		rst =0;
 		sh =0;
 		add =0;
-		status =START;
 	end
 	 default:
 		status =START;
