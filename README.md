@@ -24,5 +24,9 @@ Se adjunta la simulación de la resta de 1-2=-1, en la cual se logra visualizar 
 ## Implementacion
 En esta sección adjuntamos las evidencias de funcionamiento de la ALU en la FPGA
 
+![WhatsApp Image 2020-09-24 at 10 17 17 PM (2)](https://user-images.githubusercontent.com/42346359/94222802-fcacb700-feb3-11ea-8002-a76f840bac8e.jpeg)
+![WhatsApp Image 2020-09-24 at 10 17 17 PM (1)](https://user-images.githubusercontent.com/42346359/94222806-fe767a80-feb3-11ea-8025-0fbed686782d.jpeg)
+![WhatsApp Image 2020-09-24 at 10 17 17 PM](https://user-images.githubusercontent.com/42346359/94222808-ffa7a780-feb3-11ea-802c-b805b1d023b8.jpeg)
+
 
 
