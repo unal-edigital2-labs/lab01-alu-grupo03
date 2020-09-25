@@ -22,23 +22,27 @@ module multiplicador( input [2:0] MR,
 							 input [2:0] MD, 
 							input init, 
 							 input clk,  
-							 output reg [5:0] pp, 
+							 output reg [5:0] resultado, 
 							 output reg done
     );
-
+reg [5:0] pp;
 reg sh;
 reg rst;
 reg add;
 reg [5:0] A;
 reg [2:0] B;
 wire z;
-
+reg fin=1;
 reg [2:0] status =0;
 
 // bloque comparador 
 assign z=(B==0)?1:0;
 
-
+always @(posedge clk) begin
+if(fin)begin
+resultado=pp;
+end
+end
 //bloques de registros de desplazamiento para A y B
 always @(posedge clk) begin
    
@@ -69,18 +73,21 @@ always @(posedge clk) begin
 
 end
 
-always @(A,B) begin
-	status=START;
-end
+
 
 // FSM 
 parameter START =0,  CHECK =1, ADD =2, SHIFT =3, END1 =4;
+
+always @(MD,MR) begin
+	status=START;
+end
 
 always @(posedge clk) begin
 	case (status)
 	START: begin
 		sh=0;
 		add=0;
+		fin=0;
 		if (init) begin
 			status=CHECK;
 			done =0;
@@ -116,6 +123,7 @@ always @(posedge clk) begin
 		end
 	END1: begin
 		done =1;
+		fin=1;
 		rst =0;
 		sh =0;
 		add =0;

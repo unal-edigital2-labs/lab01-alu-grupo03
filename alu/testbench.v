@@ -50,8 +50,8 @@ module testbench;
 		#5 opcode = 2'b00;//Suma
     	#5 opcode = 2'b01;//Resta
 		
-//		#50 opcode =3;
-//		#50 opcode =4;
+		#50 opcode =3;
+		#50 opcode =4;
 		
 		
 		#5
