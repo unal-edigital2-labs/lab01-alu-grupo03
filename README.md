@@ -16,7 +16,9 @@ Para solucionar este problema como se evidencia en la imagen, lo que se hizo fue
 ##  Restador
 Este modulo fue creado desde cero y se usó como codigo base el modulo de suma ya que ambas operaciones son bastante similares y siguen un proceso similar. Sin embargo, surgian problemas cuando el resultado de la resta era negativo por como esta definida la resta en el programa, por lo que fueron nesesarias un par de lineas de codigo adicionales, que tienen funcion de restar normalmente cuando el minuendo sea mayor o igual a cero y en caso contrario restar el sustraendo al minuendo, conservando asi el valor absoluto de la diferencia, por otra parte tambien con estas mismas operaciones se logra identificar si el resultado es positivo o negativo con un quinto bit.
 ![codigo restdor](https://user-images.githubusercontent.com/41557513/94214381-11cb1b00-fe9f-11ea-954b-e9366bf37a3b.PNG)
+
 Se adjunta la simulación de la resta de 1-2=-1, en la cual se logra visualizar como resultado en el display de 7 segmentos de anodo común el número 1 y tambien que el bit de signo esta en alto, lo cual indica que este es un número negativo.
+
 ![Captura](https://user-images.githubusercontent.com/41557513/94214418-214a6400-fe9f-11ea-8da0-0f5cb92058df.PNG)
 
 ## Implementacion
