@@ -1,13 +1,11 @@
-# lab01 : Unidad de suma, resta, multiplicación, división y visualización BCD
+# lab01 : Unidad de suma, resta, multiplicación y visualización BCD
 ## Introducción
 
-En el siguiente laboratorio con el fin de abordar los primeros pasos para la construcion de un procesador, se tiene como objetio 
-implementar una alu(unidad logica aritmetica)´para que se impliementen las funciones basicas como lo es la suma, resta, multiplicacion de numeros 
-ingresados en la FPGA y mostrarlos en dos Dysplays 7-segmentos. 
+El siguiente laboratorio se realiza con el fin de tener un primer acercamiento a la construción de proyectos en las FPGA's, en este se busca
+implementar una ALU(unidad logica aritmetica) con funciones basicas como la suma, resta y multiplicacion de numeros naturales, y la visualización del resultado en dos Dysplays 7-segmentos. 
 
-##  Describcion de modulos
-en este apartado se va a describir los cambios principales asi como en diseño de nuevos modulos dieñados
-que antes nos e habian dado como el restador.
+##  Descripcion de modulos
+En este apartado se describiran los cambios principales hechos en el proyecto dado y tambien el diseño de nuevos modulos como el restador.
 
 
 ##Multiplicador.
@@ -34,9 +32,5 @@ iban a multiplicar)  para que cada vez que se cambiaran estos dos valores el est
 ##Implementacion
 
 
-
-
-
-probando..
 
 
