@@ -18,6 +18,12 @@ que se regresara al primer estado poniendo el registro de multiplicaciones parci
 Para solucionar este problema lo que se hizo fue borrar la linea de codigo que estaba al final de el proceso de maquinas de estados, crear un nuevo always que tomara como entradas A y B (numeros que se 
 iban a multiplicar)  para que cada vez que se cambiaran estos dos valores el estado actual fuera el estado inicial.
 
+![multiplicacion](https://user-images.githubusercontent.com/41557513/94214352-fb24c400-fe9e-11ea-80a9-8aff00f540b8.PNG)
+
+![codigo restdor](https://user-images.githubusercontent.com/41557513/94214381-11cb1b00-fe9f-11ea-954b-e9366bf37a3b.PNG)
+![codigo restador](https://user-images.githubusercontent.com/41557513/94214394-18599280-fe9f-11ea-93b4-1eed6cbbf83b.PNG)
+![Captura](https://user-images.githubusercontent.com/41557513/94214418-214a6400-fe9f-11ea-8da0-0f5cb92058df.PNG)
+
 ## Simulacion
 
 ##Implementacion
