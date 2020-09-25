@@ -10,7 +10,7 @@ en este apartado se va a describir los cambios principales asi como en diseño d
 que antes nos e habian dado como el restador.
 
 
-Multiplicador.
+##Multiplicador.
 Vemos que el modulo del multiplicador suministrado al principio del laboratorio prensentaba algunas fallas en este modulo debido que cuando se terminaba el proceso volvia a repetirse 
 el proceso nuevamente, esto se debia principalmente en el diseño de la maquina de estados ya que cuando se terminaba el proceso y se llegaba al estado final habia una sentencia que hacia 
 que se regresara al primer estado poniendo el registro de multiplicaciones parciales en cero.
